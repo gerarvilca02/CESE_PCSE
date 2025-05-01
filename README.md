@@ -9,15 +9,15 @@ Este proyecto implementa un sistema de riego automático basado en la placa STM3
 
 ### 1. UART  
 **Archivos:** `UART.c` · `UART_port.c`  
-- **Intención:** Proveer comunicación bidireccional con una terminal serial para supervisión remota.  
+- **Intención:** Proveer comunicación bidireccional con una terminal serial para una pantalla de supervisión remota.  
 - **Funcionalidad principal:**  
-  - Inicialización de USART2 a 115 200 bps.  
+  - Inicialización de USART2 a 115200 bps.  
   - Envío de cadenas con posicionamiento de cursor (ANSI).  
   - Recepción y transmisión de bloques de datos de tamaño configurable.
 
 ### 2. LCD I²C  
 **Archivos:** `LCD_I2C.c` · `LCD_I2C_port.c`  
-- **Intención:** Mostrar datos de estado en una pantalla LCD 16×2 usando un expansor I²C.  
+- **Intención:** Mostrar datos de estado en una pantalla LCD 16×2 de campo usando un expansor I²C.  
 - **Funcionalidad principal:**  
   - Secuencia de arranque del módulo en modo 4-bits.  
   - Limpieza de pantalla y posicionamiento de cursor.  
@@ -26,7 +26,7 @@ Este proyecto implementa un sistema de riego automático basado en la placa STM3
 
 ### 3. API_ADC  
 **Archivo:** `API_ADC.c`  
-- **Intención:** Leer el nivel de agua del tanque a través de un canal analógico.  
+- **Intención:** Leer el nivel simulado de agua del tanque a través de un canal analógico.  
 - **Funcionalidad principal:**  
   - Configuración de ADC a 12 bits y prescaler PCLK/4.  
   - Arranque de conversión, espera de finalización y lectura de valor bruto.  
